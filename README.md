@@ -1,6 +1,6 @@
 # A Modern Turkish Poet: Fine-Tuned GPT-2
 
-This repository contains the PDF version of the book **Gerçekliğin İçinde: Yapay Zeka Tarafından Yazıldı** that is written by custom fine-tuned GPT-2. In total 5 GPT-2 models trained for 5 different chapters. This book contains 70 poems, 10 for each chapter, and published at Amazon.
+This repository contains the PDF version of the book **Gerçekliğin İçinde: Yapay Zeka Tarafından Yazıldı** that is written by custom fine-tuned GPT-2. In total 5 GPT-2 models trained for 5 different chapters. This book contains 70 poems, 10 for each chapter.
 
 ## Table of Contents
 * [Chapters](#chapters)
