@@ -1,37 +1,6 @@
 # U-Net Implementation With PyTorch
 
-<div align="center">
-    <a href="">
-        <img alt="open-source-image"
-		src="https://img.shields.io/badge/Open%20Source%20❤%EF%B8%8F-%2325A162.svg?style=flat"
-        style="height: 30px"/>
-    </a>
-    <a href="https://youtu.be/HS3Q_90hnDg">
-        <img alt="youtube-tutorial"
-        src="https://img.shields.io/badge/YouTube Tutorial-%23FF0000.svg?logo=youtube&logoColor=white&style=flat"
-        style="height: 30px"/>
-    </a>
-</div>
-<div align="center">
-    <a href="https://www.buymeacoffee.com/uygarkurt" target="_blank">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" 
-        style="height: 45px"/>
-    </a>
-</div>
-<br/>
-<div align="center">
-    <p>Liked our work? give us a ⭐!</p>
-</div>
-<p align="center">
-  <img src="./assets/U.png" height="70%%" width="70%%"/>
-</p>
-
 This repository contains minimalistic implementation of U-Net that is introduced in the paper [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597) using PyTorch. Implementation has tested using [Carvana Image Masking Challenge](https://www.kaggle.com/c/carvana-image-masking-challenge) by Kaggle.
-
-### YouTube Tutorial
-This repository also contains a corresponding YouTube tutorial with the title **Implement and Train U-NET From Scratch for Image Segmentation - PyTorch**
-
-[![Thumbnail](./assets/neww_thumb.png)](https://www.youtube.com/watch?v=HS3Q_90hnDg&t=10s)
 
 ## Table of Contents
 * [U-Net Implementation](#vitimp)
@@ -40,7 +9,6 @@ This repository also contains a corresponding YouTube tutorial with the title **
     * [DownSample](#down)
     * [UpSample](#up)
 * [Usage](#usage)
-* [Contact](#contact)
 
 ## U-Net Implementation <a class="anchor" id="imp"></a>
 We need four classes to implement U-Net. Parts of the `UNet` class which are `DownSample` to apply down sampling operation, `UpSample` to apply up sampling operation, `DoubleConv` to apply double convolution operation and the `UNet` as the main U-Net class.
@@ -156,9 +124,6 @@ Project structured as follows:
 
 `data/` directory contains the data you're going to train on. `train/` contains images and `train_mask/` contains masks for the images. `manual_test/` and `manual_test_mask/` are optional directories for showcasing the inference.
 
-### Pre-Trained Model <a class="anchor" id="ptm"></a>
-You can download a sample pre-trained model from [here](https://drive.google.com/file/d/1evei4cZkBlpoq70iapItN1ojldIXSOc2/view?usp=sharing). Put the model into the `models/` directory.
-
 ### Inference <a class="anchor" id="inference"></a>
 `inference.py` file provides two functions for inference. If you want to run prediction on multiple images, you must use `pred_show_image_grid()` function by giving your data path, model path and device as arguments.
 
@@ -172,6 +137,3 @@ In order to train the model you must run the command `python main.py`. File has 
 You must give your data directory and the directory you want to save your model to `DATA_PATH` and `MODEL_SAVE_PATH` variables in the `main.py` file.
 
 By the end of the training your model will be saved into the `MODEL_SAVE_PATH`.
-
-## Contact <a class="anchor" id="contact"></a>
-You can contact me with this email address: uygarsci@gmail.com
