@@ -41,19 +41,6 @@
 - Merge checkpoints + Build recipes by merging LoRAs together
 - Fine-tune both CLIP & Unet to gain better results.
 
-# Web Demo
-
-- Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/ysharma/Low-rank-Adaptation)
-
-- Easy [colab running example](https://colab.research.google.com/drive/1iSFDpRBKEWr2HLlz243rbym3J2X95kcy?usp=sharing) of Dreambooth by @pedrogengo
-
-# UPDATES & Notes
-
-- **You can now fine-tune text_encoder as well! Enabled with simple `--train_text_encoder`**
-- **Converting to CKPT format for A1111's repo consumption!** (Thanks to [jachiam](https://github.com/jachiam)'s conversion script)
-- Img2Img Examples added.
-- Please use large learning rate! Around 1e-4 worked well for me, but certainly not around 1e-6 which will not be able to learn anything.
-
 # Lengthy Introduction
 
 Thanks to the generous work of Stability AI and Huggingface, so many people have enjoyed fine-tuning stable diffusion models to fit their needs and generate higher fidelity images. **However, the fine-tuning process is very slow, and it is not easy to find a good balance between the number of steps and the quality of the results.**
@@ -70,14 +57,6 @@ Where we can further decompose $\Delta W$ into low-rank matrices : $\Delta W = A
 This is the key idea of LoRA. We can then fine-tune $A$ and $B$ instead of $W$. In the end, you get an insanely small model as $A$ and $B$ are much smaller than $W$.
 
 Also, not all of the parameters need tuning: they found that often, $Q, K, V, O$ (i.e., attention layer) of the transformer model is enough to tune. (This is also the reason why the end result is so small). This repo will follow the same idea.
-
-Enough of the lengthy introduction, let's get to the code.
-
-# Installation
-
-```bash
-pip install git+https://github.com/cloneofsimo/lora.git
-```
 
 # Getting Started
 
@@ -238,15 +217,6 @@ $$
 
 # Tips and Discussions
 
-## **Training tips in general**
-
-I'm curating a list of tips and discussions here. Feel free to add your own tips and discussions with a PR!
-
-- Discussion by @nitrosocke, can be found [here](https://github.com/cloneofsimo/lora/issues/19#issuecomment-1347149627)
-- Configurations by @xsteenbrugge, Using Clip-interrogator to get a decent prompt seems to work well for him, https://twitter.com/xsteenbrugge/status/1602799180698763264
-- Super easy [colab running example](https://colab.research.google.com/drive/1iSFDpRBKEWr2HLlz243rbym3J2X95kcy?usp=sharing) of Dreambooth by @pedrogengo
-- [Amazing in-depth analysis](https://github.com/cloneofsimo/lora/discussions/37) on the effect of rank, $\alpha_{unet}$, $\alpha_{clip}$, and training configurations from brian6091!
-
 ### **How long should you train?**
 
 Effect of fine tuning (both Unet + CLIP) can be seen in the following image, where each image is another 500 steps.
@@ -308,13 +278,3 @@ Here is an extensive visualization on the effect of $\alpha_{unet}$, $\alpha_{te
 > "a photo of (S\*)", trained with 21 images, with rank 16 LoRA. More details can be found [here](https://github.com/cloneofsimo/lora/discussions/37)
 
 ---
-
-TODOS
-
-- Make this more user friendly for non-programmers
-- Make a better CLI
-- Make a better documentation
-- Kronecker product, like LoRA [https://arxiv.org/abs/2106.04647]
-- Adaptor-guidance
-- Time-aware fine-tuning.
-- Test alpha scheduling. I think it will be meaningful.
