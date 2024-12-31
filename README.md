@@ -1,45 +1,9 @@
 # ViT (Vision Transformer) Implementation With PyTorch
 
-<div align="center">
-    <a href="">
-        <img alt="open-source-image"
-		src="https://img.shields.io/badge/Open%20Source%20❤%EF%B8%8F-%2325A162.svg?style=flat"
-        style="height: 30px"/>
-    </a>
-    <a href="https://www.youtube.com/watch?v=Vonyoz6Yt9c">
-        <img alt="youtube-tutorial"
-        src="https://img.shields.io/badge/YouTube Tutorial-%23FF0000.svg?logo=youtube&logoColor=white&style=flat"
-        style="height: 30px"/>
-    </a>
-</div>
-<div align="center">
-    <a href="https://www.buymeacoffee.com/uygarkurt" target="_blank">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" 
-        style="height: 45px"/>
-    </a>
-</div>
-<br/>
-<div align="center">
-    <p>Liked our work? give us a ⭐!</p>
-</div>
-<p align="center">
-  <img src="./assets/arc.png" height="70%" width="70%"/>
-</p>
-
 This repository contains unofficial implementation of ViT (Vision Transformer) that is introduced in the paper [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://arxiv.org/abs/2010.11929) using PyTorch. Implementation has tested using the [MNIST Dataset](https://www.kaggle.com/competitions/digit-recognizer) for image classification task.
 
 ## Before You Start
 - **In order to use this code for images with multiple channels:** change `self.cls_token = nn.Parameter(torch.randn(size=(1, in_channels, embed_dim)), requires_grad=True)` to `self.cls_token = nn.Parameter(torch.randn(size=(1, 1, embed_dim)), requires_grad=True)`.
-
-## YouTube Tutorial
-<div align="center">
-    <a href="https://www.youtube.com/watch?v=Vonyoz6Yt9c&t=2s">Implement and Train ViT From Scratch for Image Recognition - PyTorch</a>
-    <br>
-    <br>
-    <a href="https://www.youtube.com/watch?v=Vonyoz6Yt9c&t=2s">
-        <img src="./assets/notebook-thumbnail.png" height="85%" width="85%%"/>
-    </a>
-</div>
 
 ## Table of Contents
 * [ViT Implementation](#vitimp)
@@ -48,7 +12,6 @@ This repository contains unofficial implementation of ViT (Vision Transformer) t
 * [Train Loop](#trainloop)
 * [Inference](#inference)
 * [Usage](#usage)
-* [Contact](#contact)
 
 ## ViT Implementation <a class="anchor" id="vitimp"></a>
 We need two classes to implement ViT. First is the `PatchEmbedding` to processing the image and embeddings until we feed the transformer encoder Second is the `ViT` for the rest of the process. 
@@ -179,6 +142,3 @@ for i in range(2):
 
 ## Usage <a class="anchor" id="usage"></a>
 You can run the code by downloading the notebook and updating the variables `train_df` and `test_df` to point a valid dataset location.
-
-## Contact <a class="anchor" id="contact"></a>
-You can contact me with this email address: uygarsci@gmail.com
