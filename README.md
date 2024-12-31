@@ -1,30 +1,6 @@
 # A Modern Turkish Poet: Fine-Tuned GPT-2
 
-<div align="center"> 
-    <a href="https://en.wikipedia.org/wiki/Open_source">
-        <img src="https://img.shields.io/badge/OPEN%20SOURCE%20%E2%9D%A4%EF%B8%8F-green?style=for-the-badge">
-    </a>
-    <a href="https://ieeexplore.ieee.org/document/10286720">
-        <img src="https://img.shields.io/badge/IEEE-00629b?style=for-the-badge">
-    </a>
-    <a href="https://en.wikipedia.org/wiki/MIT_License">
-        <img src="https://img.shields.io/badge/MIT-gray?style=for-the-badge">
-    </a>
-</div>
-
-<br/>
-<div align="center">
-    <p>Liked our work? give us a ⭐!</p>
-</div>
-
-This repository contains the PDF version of the book **Gerçekliğin İçinde: Yapay Zeka Tarafından Yazıldı** that is written by custom fine-tuned GPT-2. In total 5 GPT-2 models trained for 5 different chapters. This book contains 70 poems, 10 for each chapter, and published at [Amazon](https://www.amazon.com/gp/product/B0BKWMFB3V/ref=x_gr_bb_amazon?ie=UTF8&tag=x_gr_bb_amazon-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B0BKWMFB3V&SubscriptionId=1MGPYB6YW3HWK55XCGG2), [Goodreads](https://www.goodreads.com/book/show/75427836-ger-ekli-in-i-inde?ac=1&from_search=true&qid=tY5OinoPzb&rank=1) and [Google Books](https://books.google.com.tr/books/about/Gerçekliğin_İçinde.html?id=gumYEAAAQBAJ&redir_esc=y). 
-
-This work presented in the paper  [A Modern Turkish Poet: Fine-Tuned GPT-2](https://ieeexplore.ieee.org/document/10286720). This paper got accepted from UBMK23. Aim of this work is to push the limits of AI to convey human emotions on different topics.
-
-### YouTube Presentation
-This paper also contains a corresponding presentation published on YouTube with the title **A Modern Turkish Poet: Fine-Tuned GPT-2 - Paper Presentation**
-
-[![Thumbnail](./assets/thumbnail.png)](https://www.youtube.com/watch?v=963Yc1FApHw&t=10s)
+This repository contains the PDF version of the book **Gerçekliğin İçinde: Yapay Zeka Tarafından Yazıldı** that is written by custom fine-tuned GPT-2. In total 5 GPT-2 models trained for 5 different chapters. This book contains 70 poems, 10 for each chapter, and published at Amazon.
 
 ## Table of Contents
 * [Chapters](#chapters)
@@ -35,8 +11,6 @@ This paper also contains a corresponding presentation published on YouTube with 
     * [Chapter 4](#chapter4)
     * [Chapter 5](#chapter5)
 * [Data](#Data)
-* [Contact](#contact)
-* [Citation](#citation)
 
 ## Chapters <a class="anchor" id="chapters"></a>
 Below you can view the chapters with main motives and related categories.
@@ -121,19 +95,3 @@ All the categories and number of poems for each category has summarized below.
 | environment | 837      | fear       | 989      | youth    | 1033     |
 | flower      | 894      | prophet    | 943      | holiday  | 924      |
 | sea         | 823      | voyage     | 972      | travel   | 917      |
-
-## Contact <a class="anchor" id="contact"></a>
-You can contact me with this email address: uygarsci@gmail.com
-
-## Citation <a class="anchor" id="citation"></a>
-```
-@INPROCEEDINGS{10286720,
-  author={Kurt, Uygar and Çayir, Aykut},
-  booktitle={2023 8th International Conference on Computer Science and Engineering (UBMK)},
-  title={A Modern Turkish Poet: Fine-Tuned GPT-2},
-  year={2023},
-  volume={},
-  number={},
-  pages={01-05},
-  doi={10.1109/UBMK59864.2023.10286720}}
-```
